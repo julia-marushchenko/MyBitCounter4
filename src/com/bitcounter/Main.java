@@ -18,10 +18,11 @@ public class Main {
     }
 
     // Method to count 1s in set of numbers
-    public static int setBitCounter(int number){
+   public static int setBitCounter(int number){
         int counter = 0;
-        for (int index = 0; index <= number; index++){
-            counter += bitCounter(number);
+        int numberHolder = number;
+        for (int index = 0; index < number; index++){
+            counter += bitCounter(numberHolder--);
         }
         return counter;
     }
@@ -29,7 +30,19 @@ public class Main {
     // Main method to run java program
     public static void main(String[] args) {
 
-        // Calling method setBitCounter for 3
+       // Calling method setBitCounter for 3
         System.out.println(setBitCounter(3));
+
+        // Calling method setBitCounter for 6
+        System.out.println(setBitCounter(6));
+
+        // Calling method setBitCounter for 7
+        System.out.println(setBitCounter(7));
+
+        // Calling method setBitCounter for 8
+        System.out.println(setBitCounter(8));
+
+        // Calling method setBitCounter for 11
+        System.out.println(setBitCounter(11));
     }
 }
